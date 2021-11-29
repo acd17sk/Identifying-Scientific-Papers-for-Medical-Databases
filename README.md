@@ -5,36 +5,52 @@ Living in a digital world, research studies are being published online at a high
 
 Folders & Files explanation and Instructions:
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 Folder “Predictions” -- Where Prediction results are stored
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 Folder “metrics” –  where trial results were stored
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 03312021.litcovid.export.tsv  -- Litcovid pmids
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 Unprocessed data:
 
 unprocessed_all_data.pklunprocessed_daily_data.pkl
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 Processed data:
 
 processed_all_data.pklprocessed_daily_data.pkl
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 Pubmed retrieval files:
 
 all_data_ret.py – retrieves the last 100,000 uploaded articles
+
 daily_data_ret.py – retrieves articles uploaded on a specific date
+
 SAVES RESULTS AS “unprocessed_{all/daily}_data.pkl
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 Pre-processing:
 
 pre-processing.py
+
 TO USE IN COMMAND LINE “python pre-processing -m “{daily/all}”SAVES RESULTS AS “processed_{daily/all}_data.pkl”
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 Predictor:
 
 predictor.py – trains and predicts articles
-TO USE IN COMMAND LINE“python predictor.py -m “{all/daily}” -c “{nb/cnn/lr/svm}” -v “{tfidf/w2v}” -d “{balanced/imbalanced}”
+
+TO USE IN COMMAND LINE
+
+“python predictor.py -m “{all/daily}” -c “{nb/cnn/lr/svm}” -v “{tfidf/w2v}” -d “{balanced/imbalanced}”
+
 SAVES RESULTS OF POSITIVE CLASSED PMIDS IN FOLDER ”PREDICTIONS” BASED ON CONFIGURATION SELECTED BY THE USER
+
 “{nb/cnn/lr/svm}_{tfidf/w2v}_{daily/all}_{balanced/imbalanced}_Pos_Predictions.txt”
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -43,6 +59,7 @@ CNN class:
 CNN.py
 Cnn_model.py
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 Word2Vec class:
 
 W2v_class.py
