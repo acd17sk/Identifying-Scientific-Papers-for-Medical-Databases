@@ -36,7 +36,8 @@ TO USE IN COMMAND LINE “python pre-processing -m “{daily/all}”SAVES RESUL
 TO USE IN COMMAND LINE“python predictor.py -m “{all/daily}” -c “{nb/cnn/lr/svm}” -v “{tfidf/w2v}” -d “{balanced/imbalanced}”
 SAVES RESULTS OF POSITIVE CLASSED PMIDS IN FOLDER ”PREDICTIONS” BASED ON CONFIGURATION SELECTED BY THE USER
 “{nb/cnn/lr/svm}_{tfidf/w2v}_{daily/all}_{balanced/imbalanced}_Pos_Predictions.txt”
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 CNN class:
 
 CNN.py
